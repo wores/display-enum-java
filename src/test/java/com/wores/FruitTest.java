@@ -13,10 +13,12 @@ public class FruitTest {
     @Test
     public void shouldCreateCorrectMap() throws Exception {
         Map<String, String> map = Fruit.ORANGE.toMap();
-        Arrays.asList(Fruit.values()).forEach(fruit -> {
-            String displayName = map.get(fruit.name());
-            Assert.assertThat(displayName, Is.is(fruit.getDisplayName()));
-        });
+        Arrays
+            .asList(Fruit.values())
+            .forEach(fruit -> {
+                String displayName = map.get(fruit.name());
+                Assert.assertThat(displayName, Is.is(fruit.getDisplayName()));
+            });
     }
 
 }
