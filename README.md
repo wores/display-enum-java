@@ -39,7 +39,7 @@ POSTする時にリクエストにenumの定数名であるkeyを入れて投げ
 ```javascript
 <ul class="form--choose">
     // key: 定数名、 value: 表示名
-    <li v-for="value, key in json">
+    <li :for="value, key in json">
         <input v-model="checkedFruits" type="checkbox" :name="key" :value="key" :id="key">
         <label :for="value" class="checkbox">{{ value }}</label>
     </li>
