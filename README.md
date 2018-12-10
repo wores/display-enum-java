@@ -1,10 +1,12 @@
 # IDisplayEnum
 
-マスタテーブルで管理するほどの量でもなく、不変である定数をenumで管理する時に、DBに保存する定数とフロントで使う表示名をいい感じに扱うenum用のインターフェイス
+マスタテーブルで管理するほどの量でもなく、
+ビジネスライフサイクルに絡まない定数をenumで管理する時に、
+DBに保存する値とフロントで使う表示名をいい感じに扱うenum用のインターフェイス
 
 フロントでCheckBoxなどを使って定数一覧を表示するためのレスポンスを生成する時に個人的に有用だった
 
-
+普段は自分のコードに自信はないが、これは良いDRYに仕上がっている自信がある
 
 ```java
 import com.wores.interfaces.IDisplayEnum;
@@ -13,7 +15,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 public enum Fruit implements IDisplayEnum<Fruit> {
-
+    // ORANGEはDBに保存する定数名、オレンジはフロント側で表示する名前
     ORANGE("オレンジ"),
     APPLE("林檎"),
     MELON("メロン"),
