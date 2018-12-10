@@ -33,10 +33,12 @@ systemp.out.println(Fruit.ORANGE.toMap());
 // → {ORANGE=オレンジ, APPLE=林檎, MELON=メロン}
 ```
 
-js側ではこんな感じで使える(Vue.jsベース)
-POSTする時にリクエストにkeyを入れて投げて、Java側はkeyを元にEnumに変換する流れ
+### js側ではこんな感じで使える(Vue.jsベース)
+
+POSTする時にリクエストにenumの定数名であるkeyを入れて投げて、Java側はkeyを元にEnumに変換する流れ
 ```javascript
 <ul class="form--choose">
+    // key: 定数名、 value: 表示名
     <li v-for="value, key in json">
         <input v-model="checkedFruits" type="checkbox" :name="key" :value="key" :id="key">
         <label :for="key" class="checkbox">{{ value }}</label>
