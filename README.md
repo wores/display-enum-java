@@ -41,7 +41,7 @@ POSTする時にリクエストにenumの定数名であるkeyを入れて投げ
     // key: 定数名、 value: 表示名
     <li v-for="value, key in json">
         <input v-model="checkedFruits" type="checkbox" :name="key" :value="key" :id="key">
-        <label :for="key" class="checkbox">{{ value }}</label>
+        <label :for="value" class="checkbox">{{ value }}</label>
     </li>
 </ul>
 ```
